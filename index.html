@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+   <title>تفکر و سواد رسانه‌ای</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <main>
+      <article class="question">
+         <div class="title"> 
+            به نظر شما کدام یک از این سه فرد شخص بهتری است؟
+         </div>
+         <div class="group">
+            <section onclick="Show('A')">
+               <div class="user"><img src="user.svg"><span>A</span></div>
+               <div class="text">
+                  <ul>
+                     <li>به سیگار اعتیاد داشت</li>
+                     <li>از طالع‌بین‌ها مشاوره می‌گرفت </li>
+                     <li>با سیاستمداران فاسدی دوست بود</li>
+                     <li>به مشروبات الکلی وابسته بود</li>
+                  </ul>
+               </div>
+            </section>
+            <section onclick="Show('B')">
+               <div class="user"><img src="user.svg"><span>B</span></div>
+               <div class="text">
+                  <ul>
+                     <li>دوبار از کار اخراج شده‌بود </li>
+                     <li>معمولاً تا ظهر می‌خوابید</li>
+                     <li>دانشجو که بود هرروز یا مواد مخدر مصرف میکرد یا الکل</li>
+                  </ul>
+               </div>
+            </section>
+            <section onclick="Show('C')">
+               <div class="user"><img src="user.svg"><span>C</span></div>
+               <div class="text">
+                  <ul>
+                     <li>گیاهخوار بود</li>
+                     <li>سیگار نمی‌کشید</li>
+                     <li>الکل مصرف نمی‌کرد</li>
+                     <li>میلیون‌ها نفر از او پیروی میکردند</li>
+                     <li>هرگز به همسرش خیانت نکرد</li>
+                  </ul>
+               </div>
+            </section>
+         </div>
+      </article>
+      <article onclick="Close()" class="windows">
+         <div id="A"><img src="A.jpg"><span> فرانکلین روزولت <br> (سی و دومین رئیس جمهور آمریکا) </span></div>
+         <div id="B"><img src="B.jpg"><span> ویتستون چرچیل <br> (نخست‌وزیر سابق بریتانیا)</span></div>
+         <div id="C"><img src="C.jpg"><span> آدولف هیتلر </span></div>
+      </article>
+   </main>
+   <footer>
+      <p>
+         دیگران را از روی عادت‌های آنها قضاوت نکنید!
+      </p>
+      <br>
+      <span>
+         خاتون محمدی و آنیتا قنبری 
+      </span>
+   </footer>
+   <script>
+      function Show(x){
+         document.querySelector(`#${x}`).classList.add('show');
+         document.querySelector('.windows').classList.add('show');
+      }
+      function Close(){
+         document.querySelector('.windows div.show').classList.remove('show');
+         document.querySelector('.windows').classList.toggle('show');
+      }
+   </script>
+</body>
+</html>
